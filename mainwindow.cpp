@@ -34,9 +34,12 @@ void MainWindow::on_pushButton_clicked() {
         bool valid = image.load(file_name);
         if (valid) {
             QImage scaledImage = image.scaled(ui -> labelImage -> size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            QImage scaledOutput = (image.width() > image.height()) ? image.scaledToWidth(100, Qt::SmoothTransformation) : image.scaledToHeight(100, Qt::SmoothTransformation);
             ui -> labelImage -> setPixmap(QPixmap::fromImage(scaledImage));
-            QString finalDisplayString = QString(getAsciiStringofImage(image).c_str());
-            ui -> plainTextEdit -> setPlainText(finalDisplayString);
+            QString fullRes = QString(getAsciiStringofImage(image).c_str());
+            QString lowRes = QString(getAsciiStringofImage(scaledOutput).c_str());
+            ui -> textBrowser -> setText(fullRes);
+            ui -> textBrowser_2 -> setText(lowRes);
         }
     }
 
