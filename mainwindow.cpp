@@ -34,7 +34,9 @@ void MainWindow::on_pushButton_clicked() {
         bool valid = image.load(file_name);
         if (valid) {
             QImage scaledImage = image.scaled(ui -> labelImage -> size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-            QImage scaledOutput = (image.width() > image.height()) ? image.scaledToWidth(100, Qt::SmoothTransformation) : image.scaledToHeight(100, Qt::SmoothTransformation);
+            QImage scaledOutput;
+            if (image.width() > 100 || image.height() > 100) scaledOutput = (image.width() > image.height()) ? image.scaledToWidth(100, Qt::SmoothTransformation) : image.scaledToHeight(100, Qt::SmoothTransformation);
+            else scaledOutput = image;
             ui -> labelImage -> setPixmap(QPixmap::fromImage(scaledImage));
             QString fullRes = QString(getAsciiStringofImage(image).c_str());
             QString lowRes = QString(getAsciiStringofImage(scaledOutput).c_str());
