@@ -1,0 +1,13 @@
+# This file is managed by Qt Creator, do not edit!
+
+set("CMAKE_GENERATOR" "Ninja" CACHE "STRING" "" FORCE)
+set("CMAKE_CXX_COMPILER" "/Users/samanyu/emsdk/upstream/emscripten/em++" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_CXX_FLAGS_INIT" "-DQT_QML_DEBUG" CACHE "STRING" "" FORCE)
+set("QT_QMAKE_EXECUTABLE" "/Users/samanyu/Qt/6.10.1/wasm_multithread/bin/qmake" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_PROJECT_INCLUDE_BEFORE" "/Users/samanyu/desktop/projects/QtProj/ASCII-Image-Generator/build/WebAssembly_Qt_6_10_1_multi_threaded-Debug/.qtc/package-manager/auto-setup.cmake" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_BUILD_TYPE" "Debug" CACHE "STRING" "" FORCE)
+set("QT_MAINTENANCE_TOOL" "/Users/samanyu/Qt/MaintenanceTool.app/Contents/MacOS/MaintenanceTool" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_TOOLCHAIN_FILE" "/Users/samanyu/Qt/6.10.1/wasm_multithread/lib/cmake/Qt6/qt.toolchain.cmake" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_C_COMPILER" "/Users/samanyu/emsdk/upstream/emscripten/emcc" CACHE "FILEPATH" "" FORCE)
+set("CMAKE_COLOR_DIAGNOSTICS" "ON" CACHE "BOOL" "" FORCE)
+set("CMAKE_PREFIX_PATH" "/Users/samanyu/Qt/6.10.1/wasm_multithread" CACHE "PATH" "" FORCE)

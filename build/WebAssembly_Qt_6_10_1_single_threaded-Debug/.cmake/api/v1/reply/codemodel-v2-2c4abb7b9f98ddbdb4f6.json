@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1505ee4b61d20b131c8b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ASCII-Image-Generator",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ASCII-Image-Generator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ASCII-Image-Generator-Debug-8112c3ca9bfb9eb573dc.json",
+					"name" : "ASCII-Image-Generator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ASCII-Image-Generator_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ASCII-Image-Generator_autogen-Debug-495512151f7f100d0653.json",
+					"name" : "ASCII-Image-Generator_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ASCII-Image-Generator_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ASCII-Image-Generator_autogen_timestamp_deps-Debug-444c2a5605b6c1defc37.json",
+					"name" : "ASCII-Image-Generator_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/samanyu/desktop/projects/QtProj/ASCII-Image-Generator/build/WebAssembly_Qt_6_10_1_single_threaded-Debug",
+		"source" : "/Users/samanyu/desktop/projects/QtProj/ASCII-Image-Generator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
