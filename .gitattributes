@@ -6,3 +6,6 @@
 *.h linguist-language=C++
 *.hpp linguist-language=C++
 CMakeLists.txt linguist-language=C++
+
+build/WebAssembly_Qt_6_10_1_single_threaded-Debug/ASCII-Image-Generator.js linguist-generated
+build/WebAssembly_Qt_6_10_1_single_threaded-Debug/qtloader.js linguist-generated
