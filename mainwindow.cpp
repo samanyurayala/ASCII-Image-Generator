@@ -28,23 +28,26 @@ string getAsciiStringofImage(QImage image) {
 }
 
 void MainWindow::on_pushButton_clicked() {
-    QString file_name = QFileDialog::getOpenFileName(this, tr("Open a file"), QDir::homePath(), tr("Image Files (*.png *.jpg *.bmp *.jpeg)"));
-    if (QString::compare(file_name, QString()) != 0) {
-        QImage image;
-        bool valid = image.load(file_name);
-        if (valid) {
-            QImage scaledImage = image.scaled(ui -> labelImage -> size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
-            QImage scaledOutput;
-            if (image.width() > 100 || image.height() > 100) scaledOutput = (image.width() > image.height()) ? image.scaledToWidth(100, Qt::SmoothTransformation) : image.scaledToHeight(100, Qt::SmoothTransformation);
-            else scaledOutput = image;
-            ui -> labelImage -> setPixmap(QPixmap::fromImage(scaledImage));
-            QString fullRes = QString(getAsciiStringofImage(image).c_str());
-            QString lowRes = QString(getAsciiStringofImage(scaledOutput).c_str());
-            ui -> textBrowser -> setText(fullRes);
-            ui -> textBrowser_2 -> setText(lowRes);
+    auto fileContentReady = [this](const QString &fileName, const QByteArray &fileContent) {
+        if (fileName.isEmpty()) {
+            return;
+        } else {
+            QImage image;
+            bool valid = image.loadFromData(fileContent);
+            if (valid) {
+                QImage scaledImage = image.scaled(ui -> labelImage -> size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+                QImage scaledOutput;
+                if (image.width() > 100 || image.height() > 100) scaledOutput = (image.width() > image.height()) ? image.scaledToWidth(100, Qt::SmoothTransformation) : image.scaledToHeight(100, Qt::SmoothTransformation);
+                else scaledOutput = image;
+                ui -> labelImage -> setPixmap(QPixmap::fromImage(scaledImage));
+                QString fullRes = QString::fromStdString(getAsciiStringofImage(image));
+                QString lowRes = QString::fromStdString(getAsciiStringofImage(scaledOutput));
+                ui -> textBrowser -> setText(fullRes);
+                ui -> textBrowser_2 -> setText(lowRes);
+            }
         }
-    }
-
-
+    };
+    QFileDialog::getOpenFileContent("Images (*.png *.jpg *.bmp *.jpeg)", fileContentReady);
 }
+
 
