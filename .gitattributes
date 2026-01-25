@@ -9,3 +9,5 @@
 CMakeLists.txt linguist-language=C++
 build/** linguist-generated
 *.js linguist-generated
+**/CMakeFiles/** linguist-generated
+**/*_autogen/** linguist-generated
